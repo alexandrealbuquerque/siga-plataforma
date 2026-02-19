@@ -1,0 +1,26 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo Quadrado com bordas levemente arredondadas -->
+  <rect width="512" height="512" rx="40" fill="#F8F9FA"/>
+  
+  <!-- Círculo de destaque sutil (ajuda no enquadramento do GPT) -->
+  <circle cx="256" cy="256" r="220" fill="white" stroke="#E9ECEF" stroke-width="2"/>
+
+  <!-- Ícone de Fluxo/Governança (Estilo Power Platform) -->
+  <g transform="translate(156, 110)">
+    <rect x="60" y="0" width="80" height="80" rx="20" fill="#0078D4"/>
+    <rect x="0" y="50" width="80" height="80" rx="20" fill="#00EBFF" fill-opacity="0.8"/>
+    <rect x="120" y="50" width="80" height="80" rx="20" fill="#005A9E" fill-opacity="0.9"/>
+    <!-- Linhas de conexão brancas -->
+    <path d="M100 80V110" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Nome SIGA (Grande e Legível) -->
+  <text x="256" y="340" font-family="Segoe UI, Arial, sans-serif" font-size="100" font-weight="900" fill="#005A9E" text-anchor="middle" style="letter-spacing: 2px;">SIGA</text>
+  
+  <!-- Tagline Curta -->
+  <text x="256" y="385" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="bold" fill="#323130" text-anchor="middle" style="letter-spacing: 1px;">GESTÃO INTEGRADA</text>
+  
+  <!-- Badge inferior -->
+  <rect x="131" y="415" width="250" height="35" rx="17.5" fill="#0078D4"/>
+  <text x="256" y="438" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">POWER PLATFORM SOLUTION</text>
+</svg>
