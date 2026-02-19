@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Simulação – SIGA</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.kanban {
+    display: flex;
+    gap: 20px;
+}
+.column {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+.ticket {
+    background: #f4f7f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+<a href="index.html"><strong>SIGA</strong></a>
+<a href="demo.html">Simulação</a>
+</div>
+
+<div class="section">
+<div class="section-title">Simulação Operacional (Kanban)</div>
+
+<div class="kanban">
+
+<div class="column">
+<h3>Abertos</h3>
+<div class="ticket">Chamado TI – Reset de Senha</div>
+<div class="ticket">Financeiro – Ajuste de Taxa</div>
+</div>
+
+<div class="column">
+<h3>Em Atendimento</h3>
+<div class="ticket">RH – Atualização Cadastral</div>
+</div>
+
+<div class="column">
+<h3>Concluídos</h3>
+<div class="ticket">Jurídico – Contrato Revisado</div>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+SIGA – Simulação Visual
+</footer>
+
+</body>
+</html>
