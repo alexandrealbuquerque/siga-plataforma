@@ -1,2 +1,3 @@
-# siga-plataforma
-SIGA – Sistema Integrado de Gestão de Atendimentos baseado na Microsoft Power Platform.
+# siga-platform
+SIGA – Enterprise Workflow & Governance Platform built on Microsoft Power Platform.
+
