@@ -2,60 +2,208 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>SIGA – Sistema Integrado de Gestão de Atendimentos</title>
+
 <link rel="stylesheet" href="css/style.css">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f9;
+    color: #1c1c1c;
+}
+
+.navbar {
+    background: #0B6E3D;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar img {
+    height: 38px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+}
+
+.hero {
+    background: linear-gradient(135deg, #0B6E3D, #00A859);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h4 {
+    margin-top: 0;
+    color: #0B6E3D;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #00A859;
+    font-weight: bold;
+}
+
+.footer {
+    background: #0B6E3D;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+}
+</style>
 </head>
+
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
-<a href="index.html"><strong>SIGA</strong></a>
-<a href="arquitetura.html">Arquitetura</a>
-<a href="governanca.html">Governança</a>
-<a href="comparativo.html">Comparativo</a>
-<a href="perguntas-ti.html">Perguntas TI</a>
+    <a href="index.html">
+        <img src="logo/logo-siga-simples.svg" alt="SIGA">
+    </a>
+
+    <div>
+        <a href="executivo.html">Executivo</a>
+        <a href="arquitetura.html">Técnico</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="simulacao.html">Simulação</a>
+        <a href="saas.html">SaaS</a>
+    </div>
 </div>
 
+<!-- HERO -->
 <div class="hero">
-<h1>SIGA</h1>
-<h2>Sistema Integrado de Gestão de Atendimentos</h2>
-<p>
-Governança, controle e rastreabilidade para cooperativas que operam com excelência.
-Baseado em Microsoft Power Platform.
-</p>
-<a href="arquitetura.html" class="button">Ver Arquitetura Técnica</a>
+    <h1>SIGA</h1>
+    <h2>Sistema Integrado de Gestão de Atendimentos</h2>
+
+    <p>
+        Plataforma corporativa para cooperativas de crédito que buscam
+        governança, rastreabilidade e controle operacional com segurança
+        nativa Microsoft Power Platform.
+    </p>
 </div>
 
+<!-- SEÇÃO COMERCIAL -->
 <div class="section">
-<div class="section-title">Plataforma Corporativa Moderna</div>
+    <h3>Plataforma Corporativa Profissional</h3>
 
-<div class="grid">
+    <div class="cards">
 
-<div class="card">
-<h3>Segurança Nativa</h3>
-<p>Baseada em Security Roles e isolamento por tenant.</p>
+        <div class="card">
+            <h4>Site Executivo</h4>
+            <p>
+                Visão institucional voltada para diretoria, conselho e
+                tomadores de decisão.
+            </p>
+            <a href="executivo.html">Acessar →</a>
+        </div>
+
+        <div class="card">
+            <h4>Arquitetura Técnica</h4>
+            <p>
+                Detalhamento técnico da arquitetura, governança e
+                modelo de segurança.
+            </p>
+            <a href="arquitetura.html">Acessar →</a>
+        </div>
+
+        <div class="card">
+            <h4>Roadmap Estratégico</h4>
+            <p>
+                Planejamento evolutivo da plataforma com visão de expansão
+                corporativa e escalabilidade.
+            </p>
+            <a href="roadmap.html">Acessar →</a>
+        </div>
+
+        <div class="card">
+            <h4>Simulação Visual</h4>
+            <p>
+                Protótipo visual da aplicação operacional (Canvas App).
+            </p>
+            <a href="simulacao.html">Acessar →</a>
+        </div>
+
+        <div class="card">
+            <h4>Estrutura SaaS Real</h4>
+            <p>
+                Modelo real de implantação multiambiente e governança
+                baseada em tenant Microsoft.
+            </p>
+            <a href="saas.html">Acessar →</a>
+        </div>
+
+    </div>
 </div>
 
-<div class="card">
-<h3>Modelo Híbrido Escalável</h3>
-<p>Estrutura física + JSON controlado para expansão.</p>
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 SIGA – Sistema Integrado de Gestão de Atendimentos  
+    Plataforma baseada em Microsoft Power Platform
 </div>
-
-<div class="card">
-<h3>Governança Estruturada</h3>
-<p>Separação clara entre configuração e operação.</p>
-</div>
-
-<div class="card">
-<h3>Implantação Controlada</h3>
-<p>Entrega via Solution Managed dentro do tenant.</p>
-</div>
-
-</div>
-</div>
-
-<footer>
-SIGA – Arquitetura 2.0 | Baseado em Microsoft Power Platform
-</footer>
 
 </body>
 </html>
