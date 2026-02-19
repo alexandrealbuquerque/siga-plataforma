@@ -2,59 +2,287 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SIGA – Simulação Visual</title>
 
 <style>
-body { margin:0; font-family:Arial; background:#eef2f5; }
-.sidebar { width:220px; background:#0B6E3D; height:100vh; position:fixed; color:white; padding:20px; }
-.sidebar h2 { font-size:20px; }
-.sidebar a { display:block; color:white; text-decoration:none; margin:15px 0; }
-.main { margin-left:240px; padding:40px; }
-.card { background:white; padding:30px; border-radius:8px; margin-bottom:20px; box-shadow:0 4px 15px rgba(0,0,0,0.08); }
-.grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
-</style>
+* { box-sizing: border-box; }
 
+body {
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#eef2f5;
+    color:#1c1c1c;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background:#0B6E3D;
+    padding:15px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+}
+
+.logo img { height:90px; }
+
+.menu { display:flex; gap:25px; }
+
+.menu a {
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.hamburger { display:none; color:white; font-size:28px; cursor:pointer; }
+
+/* DASHBOARD LAYOUT */
+
+.dashboard { padding:40px; }
+
+.section-title {
+    font-size:22px;
+    margin:40px 0 20px 0;
+    color:#0B6E3D;
+}
+
+/* METRIC CARDS */
+
+.grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:20px;
+}
+
+.card {
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.metric {
+    font-size:30px;
+    font-weight:bold;
+    margin-top:10px;
+    color:#0B6E3D;
+}
+
+/* POWER BI STYLE GRAPH */
+
+.chart {
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.bar {
+    height:28px;
+    background:#00A859;
+    margin:12px 0;
+    border-radius:4px;
+}
+
+/* KANBAN */
+
+.kanban {
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+}
+
+.column {
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    min-width:250px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+
+.ticket {
+    background:#f4f6f9;
+    padding:15px;
+    border-radius:6px;
+    margin-bottom:12px;
+    font-size:13px;
+}
+
+/* ATENDIMENTO FORM */
+
+.form {
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.form input, .form select, .form textarea {
+    width:100%;
+    padding:10px;
+    margin:8px 0 18px 0;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+
+.form button {
+    background:#0B6E3D;
+    color:white;
+    padding:12px 20px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* MOCKUP POWER APPS */
+
+.mockup {
+    background:#ffffff;
+    border-radius:12px;
+    padding:30px;
+    box-shadow:0 12px 40px rgba(0,0,0,0.12);
+}
+
+.mock-header {
+    background:#0B6E3D;
+    color:white;
+    padding:15px;
+    border-radius:6px;
+    margin-bottom:20px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+    .menu {
+        position:absolute;
+        top:75px;
+        right:0;
+        background:#0B6E3D;
+        flex-direction:column;
+        width:100%;
+        padding:20px;
+        display:none;
+    }
+    .hamburger { display:block; }
+}
+</style>
 </head>
+
 <body>
 
-<div class="sidebar">
-<h2>SIGA</h2>
-<a href="#">Dashboard</a>
-<a href="#">Atendimentos</a>
-<a href="#">Relatórios</a>
-<a href="#">Administração</a>
+<div class="navbar">
+    <a href="index.html" class="logo">
+        <img src="logo/logo-siga-simples.svg">
+    </a>
+
+    <div class="menu" id="menu">
+        <a href="executivo.html">Executivo</a>
+        <a href="arquitetura.html">Arquitetura</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="simulacao.html">Simulação</a>
+        <a href="saas.html">SaaS</a>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
 </div>
 
-<div class="main">
-<h1>Painel Operacional</h1>
+<div class="dashboard">
 
-<div class="grid">
+    <!-- METRICS -->
+    <div class="section-title">Indicadores Operacionais</div>
+    <div class="grid">
+        <div class="card">
+            Atendimentos Abertos
+            <div class="metric">128</div>
+        </div>
+        <div class="card">
+            SLA Médio
+            <div class="metric">4.2h</div>
+        </div>
+        <div class="card">
+            Índice de Conformidade
+            <div class="metric">97%</div>
+        </div>
+    </div>
 
-<div class="card">
-<h3>Atendimentos Abertos</h3>
-<p style="font-size:28px; color:#0B6E3D;">128</p>
+    <!-- POWER BI STYLE -->
+    <div class="section-title">Volume por Setor</div>
+    <div class="chart">
+        TI
+        <div class="bar" style="width:80%"></div>
+        Financeiro
+        <div class="bar" style="width:65%"></div>
+        Jurídico
+        <div class="bar" style="width:40%"></div>
+        RH
+        <div class="bar" style="width:55%"></div>
+    </div>
+
+    <!-- KANBAN -->
+    <div class="section-title">Workflow Kanban</div>
+    <div class="kanban">
+        <div class="column">
+            <strong>Abertos</strong>
+            <div class="ticket">#1023 – Solicitação Crédito</div>
+            <div class="ticket">#1024 – Ajuste Cadastro</div>
+        </div>
+        <div class="column">
+            <strong>Em Andamento</strong>
+            <div class="ticket">#1019 – Análise Jurídica</div>
+        </div>
+        <div class="column">
+            <strong>Finalizados</strong>
+            <div class="ticket">#1002 – Abertura Conta</div>
+        </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="section-title">Tela de Atendimento</div>
+    <div class="form">
+        <label>Título</label>
+        <input type="text" placeholder="Ex: Solicitação de Crédito">
+
+        <label>Setor</label>
+        <select>
+            <option>TI</option>
+            <option>Financeiro</option>
+            <option>Jurídico</option>
+        </select>
+
+        <label>Descrição</label>
+        <textarea rows="4"></textarea>
+
+        <button>Salvar Atendimento</button>
+    </div>
+
+    <!-- MOCKUP POWER APPS -->
+    <div class="section-title">Mockup Estilo Power Apps</div>
+    <div class="mockup">
+        <div class="mock-header">
+            SIGA – Atendimento #1023
+        </div>
+        <p><strong>Status:</strong> Em Andamento</p>
+        <p><strong>Responsável:</strong> Agência Centro</p>
+        <p><strong>Data de Abertura:</strong> 19/02/2026</p>
+        <p><strong>Histórico:</strong></p>
+        <ul>
+            <li>09:12 – Atendimento criado</li>
+            <li>09:35 – Encaminhado ao Jurídico</li>
+            <li>10:02 – Em análise</li>
+        </ul>
+    </div>
+
 </div>
 
-<div class="card">
-<h3>Em Andamento</h3>
-<p style="font-size:28px; color:#00A859;">54</p>
-</div>
-
-<div class="card">
-<h3>Finalizados</h3>
-<p style="font-size:28px; color:#444;">312</p>
-</div>
-
-</div>
-
-<div class="card">
-<h3>Últimos Registros</h3>
-<p>• Solicitação de Crédito – Agência Centro</p>
-<p>• Ajuste de Cadastro – Agência Norte</p>
-<p>• Abertura de Conta – Unidade Digital</p>
-</div>
-
-</div>
+<script>
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+</script>
 
 </body>
 </html>
