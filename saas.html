@@ -2,39 +2,184 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>SIGA – Estrutura SaaS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIGA – Estrutura SaaS Corporativa</title>
+
+<link rel="stylesheet" href="css/style.css">
+
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-<script>mermaid.initialize({startOnLoad:true});</script>
+
+<script>
+mermaid.initialize({
+    startOnLoad:true,
+    theme:"default",
+    themeVariables:{
+        primaryColor:"#0B6E3D",
+        primaryTextColor:"#ffffff",
+        primaryBorderColor:"#0B6E3D",
+        lineColor:"#555",
+        secondaryColor:"#00A859",
+        tertiaryColor:"#f4f6f9"
+    }
+});
+</script>
+
 <style>
-body { margin:0; font-family:Arial; background:#f4f6f9; padding:40px; }
-h1 { color:#0B6E3D; }
-.diagram { background:white; padding:30px; border-radius:8px; box-shadow:0 4px 15px rgba(0,0,0,0.08); }
+body {
+    margin:0;
+    font-family:"Segoe UI", Arial, sans-serif;
+    background:#f4f6f9;
+    color:#1c1c1c;
+}
+
+.navbar {
+    background:#0B6E3D;
+    padding:15px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo img { height:90px; }
+
+.menu {
+    display:flex;
+    gap:25px;
+}
+
+.menu a {
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.section {
+    padding:60px 20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.section h1 {
+    color:#0B6E3D;
+    margin-bottom:10px;
+}
+
+.section p {
+    max-width:800px;
+    line-height:1.6;
+}
+
+.diagram {
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    margin-top:40px;
+}
+
+.footer {
+    background:#0B6E3D;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:60px;
+}
+
+@media(max-width:900px){
+    .menu {
+        flex-wrap:wrap;
+        gap:15px;
+    }
+}
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="index.html" class="logo">
+        <img src="logo/logo-siga-simples.svg" alt="SIGA">
+    </a>
+
+    <div class="menu">
+        <a href="executivo.html">Executivo</a>
+        <a href="arquitetura.html">Arquitetura</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="simulacao.html">Simulação</a>
+        <a href="saas.html">SaaS</a>
+    </div>
+</div>
+
+<!-- CONTEÚDO -->
+<div class="section">
+
 <h1>Modelo SaaS Corporativo – SIGA</h1>
 
+<p>
+O SIGA foi projetado para operar integralmente dentro do universo protegido da Microsoft,
+utilizando o tenant oficial da cooperativa como camada primária de governança.
+Não há infraestrutura paralela, servidores externos ou bancos proprietários.
+Toda a operação é sustentada pela Power Platform.
+</p>
+
+<p>
+O modelo SaaS corporativo permite múltiplos ambientes controlados,
+garantindo governança, segregação técnica, controle de versionamento e rastreabilidade completa
+do ciclo de vida da aplicação (ALM – Application Lifecycle Management).
+</p>
+
 <div class="diagram">
+
 <div class="mermaid">
 flowchart TB
 
-Tenant["Tenant Microsoft Cooperativa"]
+Tenant["Tenant Microsoft da Cooperativa"]
 
-subgraph Ambientes
-Dev["Ambiente Desenvolvimento"]
-Hml["Ambiente Homologação"]
-Prd["Ambiente Produção"]
+subgraph Ambientes Corporativos
+Dev["Ambiente Desenvolvimento<br/>Customizações & Testes"]
+Hml["Ambiente Homologação<br/>Validação & Governança"]
+Prd["Ambiente Produção<br/>Operação Oficial"]
 end
+
+subgraph Plataforma
+Dataverse["Dataverse"]
+PowerApps["Canvas & Model-Driven Apps"]
+Security["Security Roles & Business Units"]
+end
+
+Tenant --> Dataverse
+Dataverse --> PowerApps
+Dataverse --> Security
 
 Tenant --> Dev
 Tenant --> Hml
 Tenant --> Prd
 
-Dev -->|Deploy| Hml
-Hml -->|Aprovação| Prd
+Dev -->|Deploy Controlado| Hml
+Hml -->|Aprovação Formal| Prd
 </div>
+
+</div>
+
+<p style="margin-top:40px;">
+Esse modelo garante:
+</p>
+
+<ul>
+<li>✔ Segurança nativa Microsoft (Azure AD + Dataverse)</li>
+<li>✔ Separação técnica entre desenvolvimento e produção</li>
+<li>✔ Governança formal com aprovação de releases</li>
+<li>✔ Rastreabilidade total de mudanças</li>
+<li>✔ Escalabilidade para múltiplas unidades ou cooperativas</li>
+</ul>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+© 2026 SIGA – Sistema Integrado de Gestão de Atendimentos  
+Plataforma Corporativa baseada em Microsoft Power Platform
 </div>
 
 </body>
