@@ -11,20 +11,20 @@ flowchart TB
     subgraph Tenant_Cooperativa["Tenant Microsoft da Cooperativa"]
     
         subgraph Dataverse["Dataverse"]
-            Core["SIGA_Core\n(Tabelas Estruturais)"]
-            Modulos["SIGA_Modulos\n(Tabelas de Negócio)"]
-            Permissoes["SIGA_Permissoes\n(Controle Funcional)"]
+            Core["SIGA_Core	(Tabelas Estruturais)"]
+            Modulos["SIGA_Modulos	(Tabelas de Negócio)"]
+            Permissoes["SIGA_Permissoes	(Controle Funcional)"]
         end
 
         subgraph Admin["Camada Administrativa"]
-            ModelDriven["Model-Driven App\n(Administração)"]
+            ModelDriven["Model-Driven App	(Administração)"]
         end
 
         subgraph Operacional["Camada Operacional"]
-            Canvas["Canvas App\n(Usuários Finais)"]
+            Canvas["Canvas App	(Usuários Finais)"]
         end
 
-        Security["Security Roles\nBusiness Units\nTimes"]
+        Security["Security Roles	Business Units	Times"]
 
     end
 
