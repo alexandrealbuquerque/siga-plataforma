@@ -1,20 +1,35 @@
-# SIGA – Plataforma de Governança Operacional
-## Desenvolvida sobre Microsoft Power Platform
+# SIGA
+## Plataforma de Governança Operacional para Cooperativas de Crédito
+### Desenvolvida sobre Microsoft Power Platform
 
-O SIGA é uma plataforma corporativa voltada para cooperativas de crédito brasileiras, construída sobre a Microsoft Power Platform e Dataverse.
+---
+
+## Visão
+
+O SIGA é uma plataforma corporativa moderna, criada para substituir sistemas internos legados em cooperativas de crédito, oferecendo governança forte, controle granular de acesso e rastreabilidade completa de processos.
+
+---
 
 ## Proposta de Valor
 
-Fornecer uma solução moderna, segura e escalável para gestão de atendimentos, fluxos internos e governança operacional, substituindo sistemas legados e estruturas descentralizadas.
-
-## Diferenciais
-
-- Segurança nativa do Microsoft Dataverse
-- Controle granular por Perfil + Setor + Módulo + Ação
-- Workflow configurável com trilha completa de auditoria
-- Arquitetura híbrida (Model-Driven + Canvas Apps)
+- Segurança nativa baseada no Microsoft Dataverse
+- Controle de acesso por Perfil + Setor + Módulo + Ação
+- Workflow configurável com trilha de auditoria
+- Arquitetura híbrida (Model-Driven + Canvas)
+- Separação entre núcleo estrutural e módulos extensíveis
 - Estrutura preparada para expansão multiunidade
-- Integração natural com Power BI e Microsoft 365
+
+---
+
+## Arquitetura
+
+- Core Estrutural (Dataverse)
+- Motor de Workflow
+- Camada Administrativa (Model-Driven)
+- Camada Operacional (Canvas)
+- Modelo Meta-Driven Híbrido (Escalável)
+
+---
 
 ## Público-Alvo
 
@@ -22,11 +37,15 @@ Fornecer uma solução moderna, segura e escalável para gestão de atendimentos
 - Sistemas cooperativos
 - Instituições financeiras que operam no ecossistema Microsoft
 
-## Status
+---
 
-Arquitetura versão 2.0 validada.
-Implementação do núcleo estrutural em andamento.
+## Status do Projeto
+
+Arquitetura validada (Versão 2.0).
+Fase inicial de implementação do núcleo estrutural.
 
 ---
 
-SIGA é um projeto independente, utilizando tecnologias Microsoft para garantir segurança e escalabilidade.
+Produto independente, desenvolvido sobre tecnologias Microsoft para garantir segurança e escalabilidade.
+
+© SIGA Plataforma
