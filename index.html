@@ -9,8 +9,13 @@
 <link rel="stylesheet" href="css/style.css">
 
 <style>
+* {
+    box-sizing: border-box;
+}
+    
 body {
     margin: 0;
+    overflow-x: hidden; /* elimina scroll lateral */
     font-family: Arial, Helvetica, sans-serif;
     background: #f4f6f9;
     color: #1c1c1c;
@@ -18,11 +23,14 @@ body {
 
 .navbar {
     background: #0B6E3D;
-    padding: 15px 40px;
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
+    width: 100%;
 }
+
 
 .navbar img {
     height: 48px;
@@ -127,6 +135,20 @@ body {
     padding: 30px;
     margin-top: 60px;
 }
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+    
 </style>
 </head>
 
@@ -138,13 +160,14 @@ body {
         <img src="logo/logo-siga-simples.svg" alt="SIGA">
     </a>
 
-    <div>
+    <div class="menu">
         <a href="executivo.html">Executivo</a>
         <a href="arquitetura.html">Técnico</a>
         <a href="roadmap.html">Roadmap</a>
         <a href="simulacao.html">Simulação</a>
         <a href="saas.html">SaaS</a>
     </div>
+
 </div>
 
 <!-- HERO -->
