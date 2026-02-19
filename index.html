@@ -4,102 +4,64 @@
 <meta charset="UTF-8">
 <title>SIGA – Plataforma de Governança</title>
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #0f172a;
-    color: #f1f5f9;
-}
-header {
-    padding: 60px 40px;
-    background: linear-gradient(90deg,#0f172a,#1e293b);
-}
-h1 {
-    font-size: 36px;
-    color: #38bdf8;
-}
-section {
-    padding: 50px 40px;
-}
-h2 {
-    color: #38bdf8;
-}
-ul {
-    line-height: 1.8;
-}
-.codebox {
-    background-color: #1e293b;
-    padding: 20px;
-    border-radius: 6px;
-    font-family: monospace;
-}
-footer {
-    padding: 30px;
-    background-color: #0f172a;
-    text-align: center;
-    font-size: 14px;
-    color: #94a3b8;
-}
+body { font-family: Arial, sans-serif; margin: 0; background-color: #f4f6f8; color: #333; }
+header { padding: 60px 40px; background: linear-gradient(90deg,#007A3D,#00A859); color: white; }
+h1 { font-size: 42px; margin: 10px 0 0 0; }
+.acronym { font-size: 18px; font-style: italic; }
+.slogan { margin-top: 10px; font-size: 18px; opacity: 0.95; }
+section { padding: 60px 40px; }
+h2 { color: #007A3D; }
+.button { display: inline-block; margin: 10px 15px 10px 0; padding: 14px 22px; background-color: #00A859; color: white; text-decoration: none; font-weight: bold; border-radius: 6px; transition: 0.3s; }
+.button:hover { background-color: #007A3D; }
+.card { background-color: white; padding: 25px; margin: 20px 0; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+footer { padding: 30px; background-color: #007A3D; color: white; text-align: center; font-size: 14px; }
 </style>
 </head>
 <body>
 
 <header>
+<img src="logo-siga.svg" alt="SIGA Logo" height="60">
 <h1>SIGA</h1>
-<p>Plataforma de Governança Operacional construída sobre Microsoft Power Platform</p>
+<div class="acronym">Sistema Integrado de Gestão de Atendimentos</div>
+<div class="slogan">Governança, controle e rastreabilidade para cooperativas que operam com excelência.</div>
 </header>
 
 <section>
-<h2>Arquitetura</h2>
-<div class="codebox">
-Core Estrutural (Dataverse)<br>
-• Security Roles nativos<br>
-• Business Units e Times<br>
-• Tabelas estruturais protegidas<br><br>
 
-Camada Administrativa<br>
-• Model-Driven App<br>
-• Configuração controlada<br><br>
-
-Camada Operacional<br>
-• Canvas App leve<br>
-• Permissões cacheadas<br>
-• Sem EAV massivo
+<div class="card">
+<h2>Por que modernizar?</h2>
+<ul>
+<li>Reduz dependência de sistemas legados engessados</li>
+<li>Elimina riscos de arquitetura proprietária fechada</li>
+<li>Permite evolução modular controlada</li>
+<li>Garante segurança baseada no padrão Microsoft</li>
+<li>Centraliza governança operacional</li>
+</ul>
 </div>
-</section>
 
-<section>
-<h2>Modelo de Segurança</h2>
+<div class="card">
+<h2>Arquitetura</h2>
 <ul>
-<li>Segurança real baseada em Security Roles do Dataverse</li>
-<li>Controle funcional complementar via SIGA_Permissoes</li>
-<li>Nenhuma lógica de segurança apenas na interface</li>
-<li>Isolamento completo por tenant da cooperativa</li>
+<li>Core Estrutural protegido (Dataverse)</li>
+<li>Security Roles nativos</li>
+<li>Separação entre administração e operação</li>
+<li>Modelo meta-driven híbrido e escalável</li>
 </ul>
-</section>
+</div>
 
-<section>
-<h2>Escalabilidade</h2>
-<ul>
-<li>Modelo meta-driven híbrido</li>
-<li>Evita estrutura EAV pura</li>
-<li>Compatível com Power BI</li>
-<li>Pronto para expansão multiunidade</li>
-</ul>
-</section>
+<div class="card">
+<h2>Documentação Técnica</h2>
+<a class="button" href="arquitetura.md">Arquitetura Técnica</a>
+<a class="button" href="comparativo-tecnico.md">Comparativo Técnico</a>
+<a class="button" href="perguntas-dificeis-ti.md">Perguntas Difíceis da TI</a>
+<a class="button" href="governanca-seguranca.md">Governança e Segurança</a>
+</div>
 
-<section>
-<h2>Modelo de Implantação</h2>
-<ul>
-<li>Entrega via Solution Managed</li>
-<li>Instalação no tenant da cooperativa</li>
-<li>Sem dependência externa</li>
-<li>Sem conectores não governados</li>
-</ul>
 </section>
 
 <footer>
-SIGA – Arquitetura validada versão 2.0
+SIGA – Sistema Integrado de Gestão de Atendimentos<br>
+Baseado em Microsoft Power Platform
 </footer>
 
 </body>
