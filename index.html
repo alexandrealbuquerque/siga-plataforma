@@ -15,7 +15,7 @@ header {
     background: linear-gradient(90deg,#0f172a,#1e293b);
 }
 h1 {
-    font-size: 40px;
+    font-size: 36px;
     color: #38bdf8;
 }
 section {
@@ -27,6 +27,12 @@ h2 {
 ul {
     line-height: 1.8;
 }
+.codebox {
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 6px;
+    font-family: monospace;
+}
 footer {
     padding: 30px;
     background-color: #0f172a;
@@ -34,60 +40,66 @@ footer {
     font-size: 14px;
     color: #94a3b8;
 }
-.button {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #38bdf8;
-    color: #0f172a;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-}
 </style>
 </head>
 <body>
 
 <header>
 <h1>SIGA</h1>
-<p>Plataforma de Governança Operacional para Cooperativas de Crédito</p>
-<br>
-<a class="button" href="#contato">Solicitar Apresentação</a>
+<p>Plataforma de Governança Operacional construída sobre Microsoft Power Platform</p>
 </header>
 
 <section>
-<h2>Por que o SIGA?</h2>
-<ul>
-<li>Substitui sistemas internos legados</li>
-<li>Segurança nativa baseada no Dataverse</li>
-<li>Controle granular por Perfil + Setor + Módulo</li>
-<li>Workflow configurável com trilha de auditoria</li>
-<li>Arquitetura preparada para expansão</li>
-</ul>
-</section>
-
-<section>
 <h2>Arquitetura</h2>
+<div class="codebox">
+Core Estrutural (Dataverse)<br>
+• Security Roles nativos<br>
+• Business Units e Times<br>
+• Tabelas estruturais protegidas<br><br>
+
+Camada Administrativa<br>
+• Model-Driven App<br>
+• Configuração controlada<br><br>
+
+Camada Operacional<br>
+• Canvas App leve<br>
+• Permissões cacheadas<br>
+• Sem EAV massivo
+</div>
+</section>
+
+<section>
+<h2>Modelo de Segurança</h2>
 <ul>
-<li>Core Estrutural protegido</li>
-<li>Model-Driven para administração</li>
-<li>Canvas para operação</li>
-<li>Modelo meta-driven híbrido e escalável</li>
+<li>Segurança real baseada em Security Roles do Dataverse</li>
+<li>Controle funcional complementar via SIGA_Permissoes</li>
+<li>Nenhuma lógica de segurança apenas na interface</li>
+<li>Isolamento completo por tenant da cooperativa</li>
 </ul>
 </section>
 
 <section>
-<h2>Mercado-Alvo</h2>
-<p>Cooperativas de crédito que operam no ecossistema Microsoft e buscam modernização com governança forte.</p>
+<h2>Escalabilidade</h2>
+<ul>
+<li>Modelo meta-driven híbrido</li>
+<li>Evita estrutura EAV pura</li>
+<li>Compatível com Power BI</li>
+<li>Pronto para expansão multiunidade</li>
+</ul>
 </section>
 
-<section id="contato">
-<h2>Contato</h2>
-<p>Entre em contato para apresentação estratégica da plataforma.</p>
-<p>Email: seuemail@dominio.com</p>
+<section>
+<h2>Modelo de Implantação</h2>
+<ul>
+<li>Entrega via Solution Managed</li>
+<li>Instalação no tenant da cooperativa</li>
+<li>Sem dependência externa</li>
+<li>Sem conectores não governados</li>
+</ul>
 </section>
 
 <footer>
-© SIGA Plataforma – Desenvolvido sobre Microsoft Power Platform
+SIGA – Arquitetura validada versão 2.0
 </footer>
 
 </body>
